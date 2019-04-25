@@ -16,6 +16,7 @@
    <script src="bootstrap3_defaultTheme/assets/js/html5shiv.js"></script>
    <script src="bootstrap3_defaultTheme/assets/js/respond.min.js"></script>
    <![endif]-->
+
 </head>
 
 <body>
@@ -116,10 +117,9 @@
       <div class="page-header">
          <h2>View Cart</h2>
       </div>
-         
       <table class="table table-condensed">
-         <tr>
-            <th>Image</th>
+         <tr class="firstRow">
+            <th >Image</th>
             <th>Product</th>
             <th>Quantity</th>
             <th>Price</th>
@@ -160,19 +160,19 @@
 
          <tr class="success strong">
             <td colspan="4" class="moveRight">Subtotal</td>
-            <td >$1700</td>
+            <td class="subtotal">$1700</td>
          </tr>
          <tr class="active strong">
             <td colspan="4" class="moveRight">Tax</td>
-            <td>$170</td>
+            <td class="tax">$170</td>
          </tr>  
          <tr class="strong">
             <td colspan="4" class="moveRight">Shipping</td>
-            <td>$100</td>
+            <td class="shipping">$100</td>
          </tr> 
          <tr class="warning strong text-danger">
             <td colspan="4" class="moveRight">Grand Total</td>
-            <td>$1970</td>
+            <td class="grandtotal">$1970</td>
          </tr>    
          <tr >
             <td colspan="4" class="moveRight"><button type="button" class="btn btn-primary" >Continue Shopping</button></td>
@@ -265,6 +265,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="bootstrap3_defaultTheme/assets/js/jquery.js"></script>
-    <script src="bootstrap3_defaultTheme/dist/js/bootstrap.min.js"></script>    
+    <script src="bootstrap3_defaultTheme/dist/js/bootstrap.min.js"></script>
+    <script src="lab5.js"></script>
   </body>
 </html>
