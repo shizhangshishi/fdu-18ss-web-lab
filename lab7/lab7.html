@@ -2,7 +2,47 @@
 <head>
 <title>Chapter 10</title>
 <link rel="stylesheet" href="lab7.css">
+    <script src="jquery-3.4.1.js"></script>
 <script>
+    $(document).ready(function ()
+    {
+        $("#thumbBox div img").click(function ()
+        {
+            $("#imgManipulated img").attr("src",this.src.replace(/small/,"medium"));
+            $("#imgManipulated figcaption").html("<em>"+this.alt+"</em><br>"+this.title);
+        });
+
+        $(".sliders").change(function ()
+        {
+            let op=$("#sliderOpacity").val();
+            let st=$("#sliderSaturation").val();
+            let bt=$("#sliderBrightness").val();
+            let hu=$("#sliderHue").val();
+            let gr=$("#sliderGray").val();
+            let bl=$("#sliderBlur").val();
+
+            $("#numOpacity").text(op);
+            $("#numSaturation").text(st);
+            $("#numBrightness").text(bt);
+            $("#numHue").text(hu);
+            $("#numGray").text(gr);
+            $("#numBlur").text(bl);
+
+            $("#imgManipulated img").css("-webkit-filter",
+                `opacity(${op}%)
+                saturate(${st}%)
+                brightness(${bt}%)
+                hue-rotate(${hu}deg)
+                grayscale(${gr}%)
+                blur(${bl}px)`);
+        });
+
+        $("#resetFilters").click(function (e)
+        {
+            $("#imgManipulated img").css("-webkit-filter","none");
+            e.preventDefault();
+        })
+    })
 </script>      
 </head>    
 <body class="tiled">
